@@ -1,0 +1,282 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	display: grid;
+	border: 1px solid black;
+	height: 297mm;
+	width: 420mm;
+	padding-left: 20mm;
+	padding-top: 5mm;
+	padding-bottom: 5mm;
+	padding-right: 5mm;
+}
+/* контейнер*/
+.main__frame {
+	border: 1mm solid black;
+	height: 287mm;
+	width: 395mm;
+	font-family: 'Open Sans', sans-serif;
+	/*------------------ flex ----------------*/ 
+	/*flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	flex-direction: column;
+	align-items: flex-end;
+	flex-basis: 50%;
+	gap: 50px;*/
+	/*---------------- grid ----------------*/
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* количество колонок*/
+	grid-template-rows: repeat(3, 1fr); /* количество строк*/
+	grid-column-gap: 10px;  /* пробел между колонками */
+	grid-row-gap: 5px;
+	/*grid-gap: ; короткая запись */
+	grid-auto-rows: minmax(100px, auto); /* все строки стали 100 */
+	/* выравнивание как в flex */
+	justify-content: end; /* по оси Х */
+	align-content: space-between; /* по оси Y */
+	/*align-items: center; /* относительно самой ячейки по оси Y*/
+	/*justify-items: center; /* относительно самой ячейки по оси X*/
+/*--------------grid area -----------*/
+	display: grid;
+	grid-template-areas: /* создать шаблон страницы */
+			"side__view front__view"
+			"up__view spec"
+			"empty main__table";
+			grid-row-gap: 5px;
+			grid-template-columns: 1fr 1fr;
+		/*	grid-template-rows: repeat(3, 1fr);*/
+			/*grid-auto-rows: auto auto auto;*/
+			/*grid-auto-rows: minmax(100px, auto);*/	/* все строки стали 100 */
+			grid-template-rows: 117mm 109mm 56mm;
+
+
+
+
+
+
+
+}
+/* основная надпись*/ 
+.main__table {
+	
+	/*border: 1px solid #000000;*/
+
+	/* порядок */
+	display: grid;
+	grid-column-start: 2;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 3;
+	grid-column: 2/2; /* короткая запись */
+	grid-row: 3/3;
+	/* шаблон */
+	grid-area: main__table;
+	/* выравнивание */
+	align-content: end;
+	justify-content: end;
+ /* размер */
+	/*height: fit-content;*/
+	/*width: fit-content;*/
+	/*padding: 10px  0  0 10px;*/
+	/* чтобы двигать */
+	/*position: relative;
+	top: 50px;*/
+
+}
+/* спецификация*/
+.spec {
+	display: grid;
+	grid-area: spec;
+	margin-right: 50px;
+	align-content: end;
+	justify-content: end;
+	/*justify-content: flex-end;*/
+		/* Выравнивание элементов по горизонтали */
+		/*align-items: flex-end;*/
+		/* Выравнивание элементов по вертикали */
+	/*display: flex;*/
+	/*border: 1mm solid #d55252;*/
+	/*width: 100%;*/
+	/*align-items: start;*/
+	
+	/*width: fit-content;*/
+	/*align-self: flex-end;*/
+}
+/* вид слева */
+.side__view {
+	display: grid;
+	grid-area: side__view;
+	padding-top: 20px;
+	border: 1px solid #f57272;
+	align-content: center;
+	justify-content: center;
+	/*height: fit-content;*/
+	/*width: fit-content;*/
+	/*align-self: flex-start;*/
+}
+/* вид сверху */
+.up__view {
+	display: grid;
+	grid-area: up__view;
+	border: 1px solid #d48585;
+	align-content: center;
+	justify-content: center;
+	/*height: fit-content;*/
+	/*width: fit-content;*/
+	/*flex-basis: 100px;*/
+	/*padding: 4%;*/
+}
+/*-------------------------------------*/
+.input__wrapper {
+ width: 100%;
+ position: relative;
+ margin: 5px 0;
+ text-align: center;
+ right: 200px;
+}
+
+.input__file {
+ opacity: 0;
+ visibility: hidden;
+ position: absolute;
+}
+
+.input__file-button {
+ width: 30%;
+ height: 20px;
+ background:none;
+ border: 1px solid black;
+ color: #161515;
+ font-size: 14px;
+ font-weight: 700;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+table.main {
+	/*font-family: Tahoma, Geneva, sans-serif;*/
+	/*border: 1px solid #000000;*/
+	background-color: #FFFFFF;
+	width: 185mm;
+	height: fit-content;
+	/*text-align: center;*/
+	border-collapse: collapse;
+	
+
+
+	/*page-break-after: always;*/
+	/*table-layout: fixed;*/
+}
+
+table.main td,
+table.main th {
+	border: 1px solid #000000;
+	padding: 1px 1px;
+	border-collapse: collapse;
+	text-align: center;
+	height: 5mm;
+	font-size: 1px;
+		/*max-width: 15mm;
+	max-height: 7mm;*/
+}
+
+table.main tbody td {
+	font-size: 14px;
+	color: #020202;
+	border-collapse: collapse;
+	width: 15mm;
+	height: 5mm;
+}
+
+table.main td.style2 {
+	text-align: left;
+}
+
+table.specification {
+	border: 1px solid #000000;
+	background-color: #FFFFFF;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+table.specification td,
+table.specification th {
+	border: 1px solid #AAAAAA;
+	padding: 1px 1px;
+}
+
+table.specification tbody td {
+	font-size: 14px;
+	color: #000000;
+}
+
+table.specification thead {
+	border-bottom: 2px solid #000000;
+}
+
+table.specification thead th {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+h4 {
+	/*grid-area: spec;*/
+	align-content: center;
+		justify-content: end;
+		margin-bottom: 5px;
+		margin-left: 120px;
+}
+
+.empty {
+	display: grid;
+	grid-area: empty;
+	align-content: center;
+	justify-content: center;
+	/*height: 60mm;*/
+}
+
+/*----------размеры-------*/
+.length__product {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	bottom: 28px;
+	color: blue;
+}
+
+.diametr__product {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	bottom: 200px;
+	left: 135px;
+	writing-mode: vertical-rl;
+	transform: scale(-1);
+	color: blue;
+}
+
+select {
+ appearance: none;
+ -webkit-appearance: none;
+ width: 100%;
+ font-size: 14px;
+ padding: 0.675em 6em 0.675em 1em;
+ background-color: none;
+ border: none;
+ border-radius: 0.25rem;
+ color: #000;
+ cursor: pointer;
+ font-family: 'Open Sans', sans-serif;
+ 
+}

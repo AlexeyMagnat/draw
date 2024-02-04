@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+	<title>Doc</title>
+</head>
+
+<body>
+	<div class="main__frame">
+		<div class="main__table">
+			<table class="main">
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td colspan="7" rowspan="2">шифр 4444.24</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td colspan="7" rowspan="3">Объект:</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Изм</td>
+						<td>Кол.уч</td>
+						<td>Лист</td>
+						<td>№ док</td>
+						<td>Подп</td>
+						<td>Дата</td>
+					</tr>
+					<tr>
+						<td class="style2" colspan="2">Разработал</td>
+						<td class="style2" colspan="2"></td>
+						<td></td>
+						<td></td>
+						<td colspan="4" rowspan="3"></td>
+						<td>Стадия</td>
+						<td>Лист</td>
+						<td>Листов</td>
+					</tr>
+					<tr>
+						<td class="style2" colspan="2">Проверил</td>
+						<td colspan="2"></td>
+						<td></td>
+						<td></td>
+						<td rowspan="2">П</td>
+						<td rowspan="2">1</td>
+						<td rowspan="2">-</td>
+					</tr>
+					<tr>
+						<td class="style2" colspan="2">Нач.гр.</td>
+						<td colspan="2"></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="style2" colspan="2">Гл. контр</td>
+						<td colspan="2"></td>
+						<td></td>
+						<td></td>
+						<td colspan="4" rowspan="2"><form>
+							<label for="product"></label>
+							<select id="product" name="product">
+								<option value="5">ЕН-МАГ-5</option>
+								<option value="10">ЕН-МАГ-10</option>
+								<option value="15">ЕН-МАГ-15</option>
+							</select>
+						</form>
+					</td>
+						<td class="magnat" colspan="3" rowspan="2">МАГНАТ</td>
+					</tr>
+					<tr class="row9">
+						<td class="style2" colspan="2">Утвердил</td>
+						<td colspan="2"></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="spec">
+			<h4>Спецификация</h4>
+			<table class="specification">
+				<thead>
+					<tr>
+						<th>Поз.</th>
+						<th>Наименование</th>
+						<th>Кол.</th>
+						<th>Примечание</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Емкость накопительная V = 30 м3</td>
+						<td>1</td>
+						<td>шт</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>(корпус труба СВТ ID 2000 мм SN2)</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Технический колодец (горловина)</td>
+						<td>1</td>
+						<td>шт</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>(корпус труба СВТ ID 700 мм)</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Люк тип Л (полимер)</td>
+						<td>1</td>
+						<td>шт</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Патрубок вентиляции (PE100 SDR17 DN110)</td>
+						<td>1</td>
+						<td>шт</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Лестница тип AL</td> <!---количество зависит от горловин-->
+						<td>1</td>
+						<td>шт</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>Патрубок ПЭ100 SDR17 DN110</td>
+						<td>1</td>
+						<td>шт</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>Патрубок переливной PE100 SDR17 DN110</td>
+						<td>2</td>
+						<td>шт</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>Поплавковый датчик уровня (кабель 10м)</td>
+						<td>2</td>
+						<td>шт</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="input__wrapper">
+				<input type="file" id="excel_file" class="input__file">
+				<label for="excel_file" class="input__file-button">
+					Выберите файл
+				</label>
+				</div>
+		</div>
+		<div class="side__view">
+			<img src="/SVG/side.svg" alt="side">
+			<div class="length__product">L</div>
+			<div class="diametr__product">ID</div>
+		</div>
+		<div class="up__view">
+			<img src="/SVG/up.svg" alt="up">
+		</div>
+		<div class="empty">
+
+		</div>
+	</div>
+	<script src="/app.js"></script>
+</body>
+
+</html>
